@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/72bfcac1f5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="twitter-favicon.png ">
+    <title>Twitter</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .logo {
+
+        padding: 7px 38px;
+        margin: 3px 98px;
+    }
+
+    .logo img {
+
+        width: 2rem;
+    }
+
+    .nav-bar {
+        position: sticky;
+    }
+
+    .nav-bar li {
+
+        padding: 20px 122px;
+
+    }
+
+    .nav-bar li a {
+        color: white;
+        padding: 2px 3px;
+        margin: 2px 3px;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 200px;
+        border: 2px solid rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
+        border-radius: 18px;
+
+
+    }
+
+    .nav-bar li :hover {
+
+        border-color: rgb(52, 53, 53);
+        background-color: rgb(52, 53, 53);
+    }
+
+    .button {
+        color: white;
+        text-decoration: none;
+        padding: 19px 97px;
+        margin: 14px 136px;
+        font-family: 'Roboto', sans-serif;
+        background-color: rgb(45, 161, 255);
+        border-radius: 41px;
+        display: inline-block;
+        font-size: 17px;
+    }
+
+    .button:hover {
+        background-color: rgb(14, 131, 226);
+    }
+
+    .profile {
+        margin: 55px 0px;
+        padding: 6px 5px;
+    }
+
+    .profile-logo {
+        border: 2px solid black;
+        border-radius: 70px;
+        width: 48px;
+        padding: 24px 31px 25px 37px;
+        margin: -43px 132px 13px 98px;
+    }
+
+    .myname {
+        color: white;
+        padding: 4px 199px;
+        margin: -94px 11px;
+
+    }
+
+    .myname2 {
+        color: rgb(83, 83, 83);
+        padding: 85px 208px;
+        margin: 10px 7px;
+        font-size: 13px;
+
+    }
+
+    .home {
+        color: white;
+        margin: -835px 447px;
+        border: 2px solid rgb(83, 83, 83);
+        padding: 34px 10px 16px 4px;
+        border-top: black;
+
+
+
+    }
+
+    .text {
+        color: white;
+        background-color: black;
+        border: none;
+        font-size: 23px;
+        margin: 25px 4px 3px 3px;
+        padding: 2px 2px 3px 3px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    .homepic {
+        border: 2px solid black;
+        border-radius: 70px;
+        width: 48px;
+    }
+
+    .heading {
+        margin: -42px 59px 20px 7px;
+        padding: 3px 3px;
+        font-size: 21px;
+    }
+
+    .homeicons {
+        color: rgb(46, 115, 245);
+        list-style: none;
+        margin: 9px 57px;
+
+
+    }
+
+    .homeicons li {
+
+        display: inline-block;
+        padding: 10px 3px 3px;
+
+    }
+
+    .homeicons li a {
+        color: rgb(61, 158, 248);
+    }
+
+    .homebtn {
+        background-color: rgb(45, 161, 255);
+        text-decoration: none;
+        color: white;
+        padding: 12px 26px;
+        margin: 14px 439px;
+        margin-bottom: 12px;
+        width: 3px;
+        border-radius: 30px;
+        display: inline;
+
+    }
+
+    .homebtn:hover {
+        background-color: rgb(40, 127, 240);
+    }
+
+    .box {
+        border: 2px solid rgb(83, 83, 83);
+        border-top: black;
+        margin: 20px -11px 36px 5px;
+        padding: 102px 300px 24px 5px;
+        width: 300px;
+        height: 200px;
+        float: right;
+    }
+
+    .boximg {
+        width: 64px;
+        border-radius: 30px;
+        padding: -12px 10px 6px 5px;
+        margin: -107px 34px 60px 9px;
+    }
+
+    .boxname2 {
+        color: rgb(83, 83, 83);
+        margin: auto;
+        display: inline-block;
+
+    }
+
+    #name {
+        margin: -95px 9px 16px 89px;
+        padding: 2px 2px 2px 2px;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    .boxname {
+        font-weight: bold;
+    }
+
+    .box p {
+        margin: -8px 4px 55px 92px;
+        padding: 10px 8px 16px 6px;
+        font-family: 'Playfair Display', serif;
+
+    }
+
+    .humpic {
+        margin: 6px 36px 27px 155px;
+        margin-top: -48px;
+        padding: -14px 27px 8px 20px;
+        width: 281px;
+    }
+
+    .boxnav {
+        list-style: none;
+        margin: -26px 32px;
+
+    }
+
+    .boxnav li {
+        display: inline-block;
+        padding: 10px 3px 3px;
+    }
+
+    .boxnav li a {
+        color: rgb(81, 82, 83);
+        text-decoration: none;
+        background: none;
+        border: none;
+    }
+
+    .boxnav li .boxnav1 {
+        margin: 8px 9px 6px 4px;
+        padding: 10px 17px 3px 21px;
+    }
+
+    .boxnav li .boxnav2 {
+        margin: 8px 9px 6px 4px;
+        padding: 8px 25px 2px 18px
+    }
+
+    .boxnav li .boxnav3 {
+        margin: -38px -46px 36px 20px;
+        padding: 11px 20px 3px 22px;
+        display: inline;
+    }
+
+    .boxnav li .boxnav4 {
+        margin: -56px 460px -48px 457px;
+        padding: 8px 28px 9px 23px;
+        float: right;
+    }
+
+    .boxnav li a.boxnav1:hover {
+        color: rgb(0, 102, 236);
+        background-color: rgb(123, 167, 207);
+        border: none;
+        text-shadow: none;
+    }
+
+    .boxnav li a.boxnav2:hover {
+        color: rgb(21, 231, 109);
+        background-color: rgb(129, 185, 148);
+        border: none;
+        ;
+
+    }
+
+    .boxnav li a.boxnav3:hover {
+        color: rgb(187, 27, 27);
+        background-color: rgb(202, 158, 158);
+        border: none;
+        text-shadow: none;
+    }
+
+    .boxnav li a.boxnav4:hover {
+        color: rgb(30, 67, 192);
+        background-color: rgb(126, 144, 202);
+        border: none;
+        text-shadow: none;
+    }
+
+    .box2 {
+        border: 2px solid rgb(83, 83, 83);
+        border-top: black;
+        margin: 2px -302px -18px 4px;
+        padding: 9px 300px 0px 5px;
+        width: 300px;
+        height: 200px;
+        float: right;
+    }
+
+    .boximg2 {
+        width: 64px;
+        border-radius: 30px;
+        margin: 8px 25px 26px 5px;
+    }
+
+    .boxname4 {
+        color: rgb(83, 83, 83);
+        margin: auto;
+        display: inline-block;
+
+    }
+
+    .boxname3 {
+        font-weight: bold;
+    }
+
+    .box2 p {
+        margin: 1px 21px -18px 102px;
+        text-align: center;
+
+
+
+    }
+
+    .boxnav2 {
+        list-style: none;
+        margin: -26px 32px;
+
+    }
+
+    .boxnav2 li {
+        display: inline-block;
+        padding: 23px 3px 3px;
+    }
+
+    .boxnav2 li a {
+        color: rgb(81, 82, 83);
+        text-decoration: none;
+        background: none;
+        border: none;
+    }
+
+    .boxnav2 li .boxnav1 {
+        margin: 8px 9px 6px 4px;
+        padding: 10px 17px 3px 21px;
+    }
+
+    .boxnav2 li .boxnav2 {
+        margin: 8px 9px 6px 4px;
+        padding: 8px 25px 2px 18px
+    }
+
+    .boxnav2 li .boxnav3 {
+        margin: -38px -46px 36px 20px;
+        padding: 11px 20px 3px 22px;
+        display: inline;
+    }
+
+    .boxnav2 li .boxnav4 {
+        margin: -56px 460px -48px 457px;
+        padding: 8px 28px 9px 23px;
+        float: right;
+    }
+
+    .boxnav2 li a.boxnav1:hover {
+        color: rgb(0, 102, 236);
+        background-color: rgb(123, 167, 207);
+        border: none;
+        text-shadow: none;
+    }
+
+    .boxnav2 li a.boxnav2:hover {
+        color: rgb(21, 231, 109);
+        background-color: rgb(129, 185, 148);
+        border: none;
+        ;
+
+    }
+
+    .boxnav2 li a.boxnav3:hover {
+        color: rgb(187, 27, 27);
+        background-color: rgb(202, 158, 158);
+        border: none;
+        text-shadow: none;
+    }
+
+    .boxnav2 li a.boxnav4:hover {
+        color: rgb(30, 67, 192);
+        background-color: rgb(126, 144, 202);
+        border: none;
+        text-shadow: none;
+    }
+
+    #search {
+        background-color: rgb(29, 28, 28);
+        border: 2px solid rgb(29, 28, 28);
+        border-radius: 30px;
+        float: right;
+        margin: -731px -709px 17px 33px;
+        padding: 8px 108px 16px 61px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #search:hover {
+
+        color: white;
+    }
+
+    .rightbox {
+        background-color: rgb(29, 28, 28);
+        border: 2px solid rgb(29, 28, 28);
+        float: right;
+        margin: -667px -714px 39px 8px;
+        padding: 122px 10px 28px 96px;
+        width: 250px;
+        height: 287px;
+        border-radius: 30px;
+    }
+
+    h2 {
+        margin: -111px 5px 10px -74px;
+        font-family: 'Roboto', sans-serif;
+
+    }
+
+    .rightbox2 {
+        background-color: rgb(29, 28, 28);
+        border: 2px solid rgb(29, 28, 28);
+        float: right;
+        margin: -208px -714px 39px 8px;
+        padding: 122px 10px 28px 96px;
+        width: 250px;
+        height: 63px;
+        border-radius: 30px;
+    }
+
+    h3 {
+        margin: -113px 0px 1px -84px;
+        padding: 6px 8px 6px 4px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .akshay{
+        width: 44px;
+        border-radius: 50px;
+        margin: 4px -14px 6px -81px;
+    }
+    .rightbox2 p{
+        margin: -64px 245px -42px -14px;
+    padding: 5px 6px 3px 0px;
+    font-size: large;
+    }
+    .followbtn{
+        padding: 6px 13px 9px 20px;
+    margin: -16px 29px -8px 165px;
+        border-radius: 30px;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        display: inline-block;
+
+    }
+    .rightbox2p{
+        padding: 2px 2px 2px 2px;
+    }
+    p2{
+        color: rgb(83, 83, 83);
+        margin: 2px 2px 3px -18px;
+        padding: 2px 2px 2px 2px;
+    }
+    
+</style>
+
+<body>
+    <div class="nav-bar">
+
+        <div class="logo">
+            <img src="twitter-logo.jpeg" alt="Twitter Logo">
+        </div>
+
+
+        <div class="nav-list">
+            <li><a href="#"><i class="fas fa-home"> </i> <span>Home</span></i></a></li>
+            <li><a href="#"><i class="fas fa-hashtag"> </i> <span>Explore</span></i></a></li>
+            <li><a href="#"><i class="fas fa-user-friends"></i> <span>Communities</span></i></a></li>
+            <li><a href="#"><i class="fas fa-bell"> </i> <span>Notifications</span></i></a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> <span>Messages</span></i></a></li>
+            <li><a href="#"><i class="fas fa-user-alt"></i> <span>Profile</span></i></a></li>
+            <li><a href="#"><i class="fas fa-ellipsis-h"></i> <span>More</span></i></a></li>
+            <!-- <a href="#" class="button">Tweet</a> -->
+        </div>
+        <div>
+            <a href="#" class="button">Tweet</a>
+        </div>
+
+        <div class="profile">
+            <img src="pankaj.jpg" class="profile-logo" alt="pankaj">
+            <p class="myname">Arpan mukherjee</p>
+            <p class="myname2">@mukherjee_ar </p>
+
+
+        </div>
+
+        <div class="home">
+            <h2 class="heading">Home</h2>
+
+            <img src="pankaj.jpg" alt="" class="homepic">
+            <input type="text" placeholder="What's happening?" class="text">
+
+            <div class="homeicons">
+                <li><a href="#"><i class="fas fa-image"></i></a></li>
+                <li><a href="#"><i class="fas fa-poll-h"></i></a></li>
+                <li><a href="#"><i class="far fa-smile-beam"></i></a></li>
+                <li><a href="#"><i class="far fa-calendar-alt"></i></a></li>
+                <li><a href="#"><i class="fas fa-map-marker-alt"></i></a></li>
+                <a href="#" class="homebtn">Tweet</a>
+            </div>
+
+
+
+            <div class="box">
+
+
+                <img src="manoj.jpg" alt="manoj" class="boximg">
+                <p id="name" class="boxname">Abhishek <span class="boxname2">@abmukherjee</span></p>
+                <p>Hum First hum first.😂😂</p>
+                <img src="hum.jpg" alt=" hum first" class="humpic">
+
+                <div class="boxnav">
+                    <li><a href="#" class="boxnav1"><i class="far fa-comment"></i></a></li>
+                    <li><a href="#" class="boxnav2"><i class="fas fa-retweet"></i></a></li>
+                    <li><a href="#" class="boxnav3"><i class="far fa-heart"></i></a></li>
+                    <li><a href="#" class="boxnav4"><i class="fas fa-external-link-alt"></i></a></li>
+                </div>
+                <div class="box2">
+
+                    <img src="pankaj.jpg" alt="pankaj" class="boximg2">
+                    <p id="name" class="boxname3">Arpan <span class="boxname4">@mukherjee-ar</span></p>
+                    <br>
+
+                    <p>Ka beta zindegi zabar hai tumhari mufat mai bat raha hai petrol lelo aree lelo.</p>
+                    <div class="boxnav2">
+                        <li><a href="#" class="boxnav1"><i class="far fa-comment"></i></a></li>
+                        <li><a href="#" class="boxnav2"><i class="fas fa-retweet"></i></a></li>
+                        <li><a href="#" class="boxnav3"><i class="far fa-heart"></i></a></li>
+                        <li><a href="#" class="boxnav4"><i class="fas fa-external-link-alt"></i></a></li>
+                    </div>
+                    <div class="search">
+                        <input type="search" placeholder="  Search Twitter" id="search">
+                    </div>
+                    <div class="rightbox">
+
+                        <h2>What's happening</h2>
+                    </div>
+                    <div class="rightbox2">
+                        <h3>Who to follow</h3>
+                        <img src="akshay.jpg" alt="" class="akshay">
+                            <p>Raju </p>
+                                <br><span><a href="#" class="followbtn">follow</a></span>
+                            <p2>@21dinmaipaisadouble</p2>
+                            <!-- <a href="#" class="followbtn">follow</a> -->
+                        
+                        
+                    </div>
+                    
+                       
+                    
+                </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
